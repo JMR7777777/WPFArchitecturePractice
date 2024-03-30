@@ -1,0 +1,125 @@
+﻿<UserControl
+    x:Class="WPFArchitecturePractice.UI.Views.FindBooksPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WPFArchitecturePractice.UI.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:WPFArchitecturePractice.UI.ViewModels"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    Background="AliceBlue"
+    mc:Ignorable="d">
+    <UserControl.DataContext>
+        <viewModels:FindBooksViewModel />
+    </UserControl.DataContext>
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+        <StackPanel>
+            <!--#region Title-->
+            <TextBlock
+                Margin="10,10,10,10"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                FontSize="30"
+                Text="书籍查询" />
+            <!--#endregion-->
+
+            <!--#region 租借信息表单-->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="20*" />
+                    <ColumnDefinition Width="100" />
+                </Grid.ColumnDefinitions>
+                <!--#region ROW 0 书籍编号输入-->
+                <TextBlock
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Margin="10"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    FontSize="14"
+                    Text="书籍编号：" />
+                <TextBox
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    Height="30"
+                    Margin="10"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Center"
+                    Text="" />
+                <!--#endregion-->
+
+                <!--#region ROW 1 书籍名称输入-->
+                <TextBlock
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="10"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    FontSize="14"
+                    Text="书籍名称：" />
+
+                <TextBox
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    Height="30"
+                    Margin="10"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Center"
+                    Text="" />
+                <!--#endregion-->
+
+                <!--#region ROW 2 书籍类别输入-->
+                <TextBlock
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Margin="10"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    FontSize="14"
+                    Text="书籍类别：" />
+                <ComboBox
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    Height="30"
+                    Margin="10"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    Text="" />
+
+                <!--#endregion-->
+
+                <!--#region ROW 3 提交按钮-->
+                <Button
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="6"
+                    Margin="10,30,10,30"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Content="查询" />
+                <!--#endregion-->
+            </Grid>
+            <!--#endregion-->
+
+            <!--#region 查询结果表展示区-->
+            <DataGrid />
+            <Button
+                Margin="10,30,10,30"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Command="{Binding SetAsCurrentBooksCommand}"
+                Content="设为当前租借人" />
+            <!--#endregion-->
+
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

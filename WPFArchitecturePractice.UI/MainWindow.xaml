@@ -1,0 +1,31 @@
+﻿<Window
+    x:Class="WPFArchitecturePractice.UI.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WPFArchitecturePractice.UI"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:view="clr-namespace:WPFArchitecturePractice.UI.Views"
+    xmlns:viewModels="clr-namespace:WPFArchitecturePractice.UI.ViewModels"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    Style="{StaticResource MaterialDesignWindow}"
+    mc:Ignorable="d">
+    <Window.DataContext>
+        <viewModels:MainWindowViewModel />
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <view:Ribbon Grid.Row="0" />
+        <Frame
+            Grid.Row="1"
+            NavigationUIVisibility="Hidden"
+            Source="{Binding PagePath}" />
+        <!--  "Views/RentRecordsPage.xaml"  -->
+        <!--<view:RentRecordsPage Grid.Row="1" />-->
+    </Grid>
+</Window>

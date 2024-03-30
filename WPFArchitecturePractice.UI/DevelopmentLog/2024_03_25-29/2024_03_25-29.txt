@@ -1,0 +1,20 @@
+﻿3.25:
+1.	实现内容：
+	1.1	进一步完善第一个界面，即租借界面
+	2.1	学习InputLanguageManager属性的使用 https://blog.csdn.net/qq_42068856/article/details/101769749
+2.	下一步计划：
+	2.1	使用scroll来改造页面避免由于拉伸而导致的问题。
+	2.2	进一步研究material design的使用，想办法把他用到ribbon上。
+	2.3 language和languagemanage属性研究
+3.	存在问题：
+
+3.29:
+1.	实现内容：
+	1.1	
+	2.1	
+2.	下一步计划：
+	2.1 需要规范message的命名：	如果是post类型/对象发送类型（信息发送端给接收端），应为名词+动词+Message，表示接收端应如何响应请求，如PageChangeMessage；
+								如果是get类型/对象请求类型（向接收端要信息），应为名词+Required+Message，表示需要接收端发送什么信息，如PagePathRequiredMessage；
+	2.2	
+	2.3 
+3.	存在问题：

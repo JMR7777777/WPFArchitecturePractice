@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ImageSource x:Key="book.png">/Resources/Icons/book.png</ImageSource>
+    <ImageSource x:Key="category.png">/Resources/Icons/category.png</ImageSource>
+    <ImageSource x:Key="checked.png">/Resources/Icons/checked.png</ImageSource>
+    <ImageSource x:Key="delete.png">/Resources/Icons/delete.png</ImageSource>
+    <ImageSource x:Key="edit.png">/Resources/Icons/edit.png</ImageSource>
+    <ImageSource x:Key="file-add.png">/Resources/Icons/file-add.png</ImageSource>
+    <ImageSource x:Key="home.png">/Resources/Icons/home.png</ImageSource>
+    <ImageSource x:Key="question.png">/Resources/Icons/question.png</ImageSource>
+    <ImageSource x:Key="redo.png">/Resources/Icons/redo.png</ImageSource>
+    <ImageSource x:Key="save.png">/Resources/Icons/save.png</ImageSource>
+    <ImageSource x:Key="search.png">/Resources/Icons/search.png</ImageSource>
+    <ImageSource x:Key="sketchMap.png">/Resources/Icons/sketchMap.png</ImageSource>
+    <ImageSource x:Key="time-circle.png">/Resources/Icons/time-circle.png</ImageSource>
+    <ImageSource x:Key="undo.png">/Resources/Icons/undo.png</ImageSource>
+    <ImageSource x:Key="user.png">/Resources/Icons/user.png</ImageSource>
+</ResourceDictionary>

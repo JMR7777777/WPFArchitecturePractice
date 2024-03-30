@@ -1,0 +1,224 @@
+﻿<UserControl
+    x:Class="WPFArchitecturePractice.UI.Views.Ribbon"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WPFArchitecturePractice.UI.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:WPFArchitecturePractice.UI.ViewModels"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <!--  设置 DataContext 为 MainViewModel 的实例  -->
+    <UserControl.DataContext>
+        <viewModels:RibbonViewModel />
+    </UserControl.DataContext>
+    <Grid>
+        <Ribbon SelectedIndex="0">
+            <!--  Ribbon Quick Access Toolbar  -->
+            <Ribbon.QuickAccessToolBar>
+                <RibbonQuickAccessToolBar>
+                    <RibbonButton SmallImageSource="{StaticResource save.png}" />
+                    <RibbonSplitButton SmallImageSource="{StaticResource undo.png}">
+                        <RibbonSplitMenuItem Header="Undo1" />
+                        <RibbonSplitMenuItem Header="Undo2" />
+                        <RibbonSplitMenuItem Header="Undo3" />
+                    </RibbonSplitButton>
+                    <RibbonSplitButton SmallImageSource="{StaticResource redo.png}">
+                        <RibbonSplitMenuItem Header="Redo1" />
+                        <RibbonSplitMenuItem Header="Redo2" />
+                        <RibbonSplitMenuItem Header="Redo3" />
+                    </RibbonSplitButton>
+                </RibbonQuickAccessToolBar>
+            </Ribbon.QuickAccessToolBar>
+
+            <!--  Ribbon Help Pane Content  -->
+            <Ribbon.HelpPaneContent>
+                <RibbonButton SmallImageSource="{StaticResource question.png}" />
+            </Ribbon.HelpPaneContent>
+
+            <!--  Ribbon Application Menu  -->
+            <Ribbon.ApplicationMenu>
+                <RibbonApplicationMenu KeyTip="F" Visibility="Collapsed">
+                    <RibbonApplicationMenuItem Width="150" Header="Save" />
+                    <RibbonApplicationMenuItem Header="Options" />
+                </RibbonApplicationMenu>
+            </Ribbon.ApplicationMenu>
+
+            <!--  Ribbon Tab #1 Home  -->
+            <RibbonTab Header="租借记录" KeyTip="R">
+                <RibbonGroup Header="记录管理">
+                    <RibbonButton
+                        Command="{Binding RentRecordsClickedCommand}"
+                        Label="租借登记"
+                        LargeImageSource="{StaticResource file-add.png}"
+                        SmallImageSource="{StaticResource file-add.png}" />
+                    <RibbonButton
+                        Label="记录查询"
+                        LargeImageSource="{StaticResource search.png}"
+                        SmallImageSource="{StaticResource search.png}" />
+                    <RibbonButton
+                        Label="记录修改"
+                        LargeImageSource="{StaticResource edit.png}"
+                        SmallImageSource="{StaticResource edit.png}" />
+                    <RibbonButton
+                        Label="记录删除"
+                        LargeImageSource="{StaticResource delete.png}"
+                        SmallImageSource="{StaticResource delete.png}" />
+                </RibbonGroup>
+                <RibbonGroup Header="记录统计">
+                    <RibbonMenuButton
+                        Label="根据书籍统计"
+                        LargeImageSource="{StaticResource book.png}"
+                        SmallImageSource="{StaticResource book.png}" />
+                    <RibbonMenuButton
+                        Label="根据租借人统计"
+                        LargeImageSource="{StaticResource user.png}"
+                        SmallImageSource="{StaticResource user.png}" />
+                    <RibbonMenuButton
+                        Label="根据租借时间统计"
+                        LargeImageSource="{StaticResource time-circle.png}"
+                        SmallImageSource="{StaticResource time-circle.png}" />
+                </RibbonGroup>
+            </RibbonTab>
+
+            <RibbonTab Header="书籍管理" KeyTip="B">
+                <RibbonGroup Header="库存管理">
+                    <RibbonButton
+                        Command="{Binding FindBooksClickedCommand}"
+                        Label="书籍查询"
+                        LargeImageSource="{StaticResource search.png}"
+                        SmallImageSource="{StaticResource search.png}" />
+                    <RibbonButton
+                        Label="新书登记"
+                        LargeImageSource="{StaticResource file-add.png}"
+                        SmallImageSource="{StaticResource file-add.png}" />
+                    <RibbonButton
+                        Label="信息变更"
+                        LargeImageSource="{StaticResource edit.png}"
+                        SmallImageSource="{StaticResource edit.png}" />
+                    <RibbonButton
+                        Label="旧书删除"
+                        LargeImageSource="{StaticResource delete.png}"
+                        SmallImageSource="{StaticResource delete.png}" />
+                </RibbonGroup>
+                <RibbonGroup Header="书籍统计">
+                    <RibbonButton
+                        Label="根据录入人统计"
+                        LargeImageSource="{StaticResource user.png}"
+                        SmallImageSource="{StaticResource user.png}" />
+                    <RibbonButton
+                        Label="根据书籍类别统计"
+                        LargeImageSource="{StaticResource category.png}"
+                        SmallImageSource="{StaticResource category.png}" />
+                    <RibbonButton
+                        Label="根据租借次数统计"
+                        LargeImageSource="{StaticResource file-add.png}"
+                        SmallImageSource="{StaticResource file-add.png}" />
+                    <RibbonButton
+                        Label="根据录入时间进行统计"
+                        LargeImageSource="{StaticResource time-circle.png}"
+                        SmallImageSource="{StaticResource time-circle.png}" />
+                    <RibbonButton
+                        Label="根据当前状态进行统计"
+                        LargeImageSource="{StaticResource home.png}"
+                        SmallImageSource="{StaticResource home.png}" />
+                </RibbonGroup>
+            </RibbonTab>
+
+            <RibbonTab Header="租借人管理" KeyTip="C">
+                <RibbonGroup Header="租借人管理">
+                    <RibbonButton
+                        Command="{Binding FindRentersClickedCommand}"
+                        Label="查询租借人"
+                        LargeImageSource="{StaticResource user.png}"
+                        SmallImageSource="{StaticResource user.png}" />
+                    <RibbonButton
+                        Label="增加租借人"
+                        LargeImageSource="{StaticResource user.png}"
+                        SmallImageSource="{StaticResource user.png}" />
+                    <RibbonButton
+                        Label="修改租借人"
+                        LargeImageSource="{StaticResource user.png}"
+                        SmallImageSource="{StaticResource user.png}" />
+                    <RibbonButton
+                        Label="删除租借人"
+                        LargeImageSource="{StaticResource user.png}"
+                        SmallImageSource="{StaticResource user.png}" />
+                </RibbonGroup>
+                <RibbonGroup Header="租借人统计">
+                    <RibbonButton
+                        Label="历史租借信息"
+                        LargeImageSource="{StaticResource user.png}"
+                        SmallImageSource="{StaticResource user.png}" />
+                    <RibbonButton
+                        Label="信息变更记录"
+                        LargeImageSource="{StaticResource user.png}"
+                        SmallImageSource="{StaticResource user.png}" />
+                    <RibbonButton
+                        Label="租借偏好统计"
+                        LargeImageSource="{StaticResource user.png}"
+                        SmallImageSource="{StaticResource user.png}" />
+                </RibbonGroup>
+            </RibbonTab>
+
+            <RibbonTab Header="用户管理" KeyTip="U">
+                <RibbonGroup Header="本人信息">
+                    <RibbonButton
+                        Label="本人信息"
+                        LargeImageSource="{StaticResource user.png}"
+                        SmallImageSource="{StaticResource user.png}" />
+                    <RibbonButton
+                        Label="隐私设置"
+                        LargeImageSource="{StaticResource user.png}"
+                        SmallImageSource="{StaticResource user.png}" />
+                    <RibbonButton
+                        Label="偏好设置"
+                        LargeImageSource="{StaticResource user.png}"
+                        SmallImageSource="{StaticResource user.png}" />
+                </RibbonGroup>
+                <RibbonGroup Header="他人信息">
+                    <RibbonButton
+                        Label="用户查询"
+                        LargeImageSource="{StaticResource user.png}"
+                        SmallImageSource="{StaticResource user.png}" />
+                    <RibbonButton
+                        Label="用户修改"
+                        LargeImageSource="{StaticResource user.png}"
+                        SmallImageSource="{StaticResource user.png}" />
+                    <RibbonButton
+                        Label="用户删除"
+                        LargeImageSource="pack://application:,,,/Resources/Icons/user.png"
+                        SmallImageSource="pack://application:,,,/Resources/Icons/user.png" />
+                    <RibbonButton
+                        Label="用户权限设置"
+                        LargeImageSource="pack://application:,,,/Resources/Icons/user.png"
+                        SmallImageSource="pack://application:,,,/Resources/Icons/user.png" />
+                </RibbonGroup>
+            </RibbonTab>
+
+            <RibbonTab Header="系统配置管理" KeyTip="S">
+                <RibbonGroup Header="黑名单">
+                    <RibbonButton
+                        Label="租借人黑名单"
+                        LargeImageSource="pack://application:,,,/Resources/Icons/user.png"
+                        SmallImageSource="pack://application:,,,/Resources/Icons/user.png" />
+                    <RibbonButton
+                        Label="用户黑名单"
+                        LargeImageSource="pack://application:,,,/Resources/Icons/user.png"
+                        SmallImageSource="pack://application:,,,/Resources/Icons/user.png" />
+                    <RibbonButton
+                        Label="书籍状态管理"
+                        LargeImageSource="pack://application:,,,/Resources/Icons/user.png"
+                        SmallImageSource="pack://application:,,,/Resources/Icons/user.png" />
+                </RibbonGroup>
+                <RibbonGroup Header="异常监测">
+                    <RibbonButton
+                        Label="异常信息记录"
+                        LargeImageSource="pack://application:,,,/Resources/Icons/user.png"
+                        SmallImageSource="pack://application:,,,/Resources/Icons/user.png" />
+                </RibbonGroup>
+            </RibbonTab>
+        </Ribbon>
+    </Grid>
+</UserControl>
