@@ -188,12 +188,12 @@
                         SmallImageSource="{StaticResource user.png}" />
                     <RibbonButton
                         Label="用户删除"
-                        LargeImageSource="pack://application:,,,/Resources/Icons/user.png"
-                        SmallImageSource="pack://application:,,,/Resources/Icons/user.png" />
+                        LargeImageSource="{StaticResource user.png}"
+                        SmallImageSource="{StaticResource user.png}" />
                     <RibbonButton
                         Label="用户权限设置"
-                        LargeImageSource="pack://application:,,,/Resources/Icons/user.png"
-                        SmallImageSource="pack://application:,,,/Resources/Icons/user.png" />
+                        LargeImageSource="{StaticResource user.png}"
+                        SmallImageSource="{StaticResource user.png}" />
                 </RibbonGroup>
             </RibbonTab>
 
@@ -201,22 +201,22 @@
                 <RibbonGroup Header="黑名单">
                     <RibbonButton
                         Label="租借人黑名单"
-                        LargeImageSource="pack://application:,,,/Resources/Icons/user.png"
-                        SmallImageSource="pack://application:,,,/Resources/Icons/user.png" />
+                        LargeImageSource="{StaticResource user.png}"
+                        SmallImageSource="{StaticResource user.png}" />
                     <RibbonButton
                         Label="用户黑名单"
-                        LargeImageSource="pack://application:,,,/Resources/Icons/user.png"
-                        SmallImageSource="pack://application:,,,/Resources/Icons/user.png" />
+                        LargeImageSource="{StaticResource user.png}"
+                        SmallImageSource="{StaticResource user.png}" />
                     <RibbonButton
                         Label="书籍状态管理"
-                        LargeImageSource="pack://application:,,,/Resources/Icons/user.png"
-                        SmallImageSource="pack://application:,,,/Resources/Icons/user.png" />
+                        LargeImageSource="{StaticResource user.png}"
+                        SmallImageSource="{StaticResource user.png}" />
                 </RibbonGroup>
                 <RibbonGroup Header="异常监测">
                     <RibbonButton
                         Label="异常信息记录"
-                        LargeImageSource="pack://application:,,,/Resources/Icons/user.png"
-                        SmallImageSource="pack://application:,,,/Resources/Icons/user.png" />
+                        LargeImageSource="{StaticResource user.png}"
+                        SmallImageSource="{StaticResource user.png}" />
                 </RibbonGroup>
             </RibbonTab>
         </Ribbon>
