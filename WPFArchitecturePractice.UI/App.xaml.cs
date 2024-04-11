@@ -1,6 +1,11 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Windows;
-
+using WPFArchitecturePractice.BLL.Service.Rent;
+using WPFArchitecturePractice.DAL;
+using WPFArchitecturePractice.DAL.DataAccess.Rent;
+using WPFArchitecturePractice.UI.ViewModels;
+using WPFArchitecturePractice.UI.Views;
 
 namespace WPFArchitecturePractice.UI;
 
@@ -9,24 +14,47 @@ namespace WPFArchitecturePractice.UI;
 /// </summary>
 public partial class App : Application
 {
-    private readonly ServiceProvider _serviceProvider;
-
     public App()
     {
-        var serviceCollection = new ServiceCollection();
-        ConfigureServices(serviceCollection);
-        _serviceProvider = serviceCollection.BuildServiceProvider();
+        Services = ConfigureServices();
+        this.InitializeComponent();
     }
 
-    private void ConfigureServices(IServiceCollection services)
+    public new static App Current => (App)Application.Current;
+
+    public IServiceProvider Services { get; }
+
+    private static IServiceProvider ConfigureServices()
     {
+        var services = new ServiceCollection();
+
+        // Views和ViewModel
         services.AddSingleton<MainWindow>();
+        services.AddSingleton<MainWindowViewModel>();
+
+        services.AddSingleton<FindBooksPage>();
+        services.AddSingleton<FindBooksViewModel>();
+
+        // 注册 DbContext 服务
+        services.AddDbContext<WPFArchitecturePraticeContext>();
+
+        //注册 DAL层 的服务
+        services.AddScoped<IBookDataAccess, BookDataAccess>();
+
+        //注册 BLL层 的服务
+        services.AddScoped<IBookService, BookService>();
+
+        return services.BuildServiceProvider();
     }
 
     protected override void OnStartup(StartupEventArgs e)
     {
         base.OnStartup(e);
-        var mainWindow = _serviceProvider.GetRequiredService<MainWindow>();
-        mainWindow.Show();
+
+        var MainWindow = Services.GetRequiredService<MainWindow>();
+        MainWindow.DataContext = Services.GetRequiredService<MainWindowViewModel>();
+
+        MainWindow.Show();
+
     }
 }

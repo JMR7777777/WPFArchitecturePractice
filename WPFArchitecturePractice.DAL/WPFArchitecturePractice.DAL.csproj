@@ -8,27 +8,38 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.28" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.28">
+	  <None Remove="appsettings.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.17" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.17">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="6.0.28" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.28" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.28">
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="7.0.17" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.17" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.17">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<Folder Include="Rent\" />
-		<Folder Include="System\" />
+		<Folder Include="EntityConfig\System\" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\WPFArchitecturePractice.Model\WPFArchitecturePractice.Model.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="appsettings.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
 	</ItemGroup>
 
 </Project>

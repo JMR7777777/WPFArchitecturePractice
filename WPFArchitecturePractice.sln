@@ -6,10 +6,18 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFArchitecturePractice.Model", "WPFArchitecturePractice.Model\WPFArchitecturePractice.Model.csproj", "{2904CA3F-FC71-4A56-A529-60035D8AF0F6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFArchitecturePractice.BLL", "WPFArchitecturePractice.BLL\WPFArchitecturePractice.BLL.csproj", "{A25B07EB-E84F-46BC-84C5-54A3A9E76382}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0193EFB8-81DC-4388-AA24-123CB5B58C1F} = {0193EFB8-81DC-4388-AA24-123CB5B58C1F}
+		{2904CA3F-FC71-4A56-A529-60035D8AF0F6} = {2904CA3F-FC71-4A56-A529-60035D8AF0F6}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFArchitecturePractice.DAL", "WPFArchitecturePractice.DAL\WPFArchitecturePractice.DAL.csproj", "{0193EFB8-81DC-4388-AA24-123CB5B58C1F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFArchitecturePractice.UI", "WPFArchitecturePractice.UI\WPFArchitecturePractice.UI.csproj", "{B878DBDB-593C-4205-A3E7-CCACE36E5177}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2904CA3F-FC71-4A56-A529-60035D8AF0F6} = {2904CA3F-FC71-4A56-A529-60035D8AF0F6}
+		{A25B07EB-E84F-46BC-84C5-54A3A9E76382} = {A25B07EB-E84F-46BC-84C5-54A3A9E76382}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

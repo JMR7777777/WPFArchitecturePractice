@@ -16,6 +16,5 @@ public class BookCategory
     public string Name { get; set; }
     public bool IsDeleted { get; set; }
 
-    [ForeignKey("CategoryId")]
     public virtual ICollection<Book> Books { get; set; }
 }

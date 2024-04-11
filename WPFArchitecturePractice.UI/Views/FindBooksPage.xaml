@@ -10,9 +10,9 @@
     d:DesignWidth="800"
     Background="AliceBlue"
     mc:Ignorable="d">
-    <UserControl.DataContext>
+    <!--<UserControl.DataContext>
         <viewModels:FindBooksViewModel />
-    </UserControl.DataContext>
+    </UserControl.DataContext>-->
     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
         <StackPanel>
             <!--#region Title-->
@@ -54,7 +54,7 @@
                     Margin="10"
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Center"
-                    Text="" />
+                    Text="{Binding BookId, TargetNullValue=''}" />
                 <!--#endregion-->
 
                 <!--#region ROW 1 书籍名称输入-->
@@ -74,7 +74,7 @@
                     Margin="10"
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Center"
-                    Text="" />
+                    Text="{Binding BookTitle}" />
                 <!--#endregion-->
 
                 <!--#region ROW 2 书籍类别输入-->
@@ -92,8 +92,7 @@
                     Height="30"
                     Margin="10"
                     HorizontalAlignment="Stretch"
-                    VerticalAlignment="Stretch"
-                    Text="" />
+                    VerticalAlignment="Stretch" />
 
                 <!--#endregion-->
 
@@ -105,13 +104,14 @@
                     Margin="10,30,10,30"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
+                    Command="{Binding SearchBooksCommand}"
                     Content="查询" />
                 <!--#endregion-->
             </Grid>
             <!--#endregion-->
 
             <!--#region 查询结果表展示区-->
-            <DataGrid />
+            <DataGrid Margin="40" ItemsSource="{Binding Books}" />
             <Button
                 Margin="10,30,10,30"
                 HorizontalAlignment="Center"

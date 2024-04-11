@@ -16,12 +16,11 @@ public class Book
     public string Title { get; set; }
     public string Description { get; set; }
     public string Author { get; set; }
-    public bool IsRentingState { get; set; }
     public DateTime CreatedDate { get; set; }
     public DateTime UpdatedDate { get; set; }
+    public bool IsRentingState { get; set; }
     public bool IsDeleted { get; set; }
 
-    [ForeignKey("ParentId")]
-    [Required]
+    public short CategoryId { get; set; }
     public virtual BookCategory Category { get; set; }
 }
