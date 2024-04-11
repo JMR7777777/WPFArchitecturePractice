@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using CommunityToolkit.Mvvm.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Windows;
 using WPFArchitecturePractice.BLL.Service.Rent;
@@ -32,8 +33,11 @@ public partial class App : Application
         services.AddSingleton<MainWindow>();
         services.AddSingleton<MainWindowViewModel>();
 
-        services.AddSingleton<FindBooksPage>();
         services.AddSingleton<FindBooksViewModel>();
+        services.AddSingleton<FindRentersViewModel>();
+        services.AddSingleton<RentRecordsViewModel>();
+        services.AddSingleton<RibbonViewModel>();
+
 
         // 注册 DbContext 服务
         services.AddDbContext<WPFArchitecturePraticeContext>();
@@ -52,9 +56,6 @@ public partial class App : Application
         base.OnStartup(e);
 
         var MainWindow = Services.GetRequiredService<MainWindow>();
-        MainWindow.DataContext = Services.GetRequiredService<MainWindowViewModel>();
-
         MainWindow.Show();
-
     }
 }

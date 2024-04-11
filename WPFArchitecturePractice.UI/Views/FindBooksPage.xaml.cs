@@ -12,7 +12,6 @@ namespace WPFArchitecturePractice.UI.Views
         public FindBooksPage()
         {
             InitializeComponent();
-            DataContext = App.Current.Services.GetService<FindBooksViewModel>();
         }
     }
 }

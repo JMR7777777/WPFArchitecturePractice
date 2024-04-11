@@ -6,7 +6,7 @@ using WPFArchitecturePractice.UI.Messages;
 
 namespace WPFArchitecturePractice.UI.ViewModels
 {
-    partial class FindRentersViewModel : ObservableObject
+    public partial class FindRentersViewModel : ObservableObject
     {
         [RelayCommand]
         public void SetAsCurrentRenter()

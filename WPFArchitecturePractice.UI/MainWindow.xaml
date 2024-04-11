@@ -10,11 +10,9 @@
     Title="MainWindow"
     Width="800"
     Height="450"
+    DataContext="{Binding MainWindowViewModel, Source={StaticResource ViewModelLocator}}"
     Style="{StaticResource MaterialDesignWindow}"
     mc:Ignorable="d">
-    <Window.DataContext>
-        <viewModels:MainWindowViewModel />
-    </Window.DataContext>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />

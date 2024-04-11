@@ -11,7 +11,7 @@ using WPFArchitecturePractice.UI.Messages;
 
 namespace WPFArchitecturePractice.UI.ViewModels
 {
-    partial class MainWindowViewModel : ObservableObject, IRecipient<ChangePageMessage>
+    public partial class MainWindowViewModel : ObservableObject, IRecipient<ChangePageMessage>
     {
         [ObservableProperty]
         private string? pagePath;

@@ -12,7 +12,7 @@ using WPFArchitecturePractice.UI.Messages;
 
 namespace WPFArchitecturePractice.UI.ViewModels
 {
-    partial class RibbonViewModel : ObservableObject
+    public partial class RibbonViewModel : ObservableObject
     {
         [ObservableProperty]
         private string? pagePath;

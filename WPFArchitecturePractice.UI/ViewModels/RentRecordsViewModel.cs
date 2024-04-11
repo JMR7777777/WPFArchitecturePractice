@@ -10,7 +10,7 @@ using WPFArchitecturePractice.UI.Messages;
 
 namespace WPFArchitecturePractice.UI.ViewModels
 {
-    partial class RentRecordsViewModel:ObservableObject
+    public partial class RentRecordsViewModel:ObservableObject
     {
         [ObservableProperty]
         private string? renterId;
