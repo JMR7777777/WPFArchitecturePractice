@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using System.Windows.Controls;
-using WPFArchitecturePractice.UI.ViewModels;
+﻿using System.Windows.Controls;
 
 namespace WPFArchitecturePractice.UI.Views
 {

@@ -1,14 +1,8 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Messaging.Messages;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CommunityToolkit.Mvvm.Messaging.Messages;
 
 namespace WPFArchitecturePractice.UI.Messages
 {
-    internal class TestRequestMessage: RequestMessage<string>
+    internal class TestRequestMessage : RequestMessage<string>
     {
         public string? FieldName;
 

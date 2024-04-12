@@ -1,12 +1,6 @@
-﻿using CommunityToolkit.Mvvm.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Windows;
-using WPFArchitecturePractice.BLL.Service.Rent;
-using WPFArchitecturePractice.DAL;
-using WPFArchitecturePractice.DAL.DataAccess.Rent;
-using WPFArchitecturePractice.UI.ViewModels;
-using WPFArchitecturePractice.UI.Views;
 
 namespace WPFArchitecturePractice.UI;
 
@@ -15,40 +9,30 @@ namespace WPFArchitecturePractice.UI;
 /// </summary>
 public partial class App : Application
 {
+    public new static App Current => (App)Application.Current;
+
+    public IServiceProvider Services { get; }
+
     public App()
     {
         Services = ConfigureServices();
         this.InitializeComponent();
     }
 
-    public new static App Current => (App)Application.Current;
-
-    public IServiceProvider Services { get; }
-
     private static IServiceProvider ConfigureServices()
     {
-        var services = new ServiceCollection();
+        IServiceCollection services = new ServiceCollection();
 
-        // Views和ViewModel
-        services.AddSingleton<MainWindow>();
-        services.AddSingleton<MainWindowViewModel>();
+        // 分别注册 ViewModel 和 服务
+        ServiceLocator.RegisterServices(ref services);
+        ViewModelLocator.RegisterViewModels(ref services);
 
-        services.AddSingleton<FindBooksViewModel>();
-        services.AddSingleton<FindRentersViewModel>();
-        services.AddSingleton<RentRecordsViewModel>();
-        services.AddSingleton<RibbonViewModel>();
+        IServiceProvider serviceProvider = services.BuildServiceProvider();
 
+        ServiceLocator.SetServiceProvider(serviceProvider);
+        ViewModelLocator.SetServiceProvider(serviceProvider);
 
-        // 注册 DbContext 服务
-        services.AddDbContext<WPFArchitecturePraticeContext>();
-
-        //注册 DAL层 的服务
-        services.AddScoped<IBookDataAccess, BookDataAccess>();
-
-        //注册 BLL层 的服务
-        services.AddScoped<IBookService, BookService>();
-
-        return services.BuildServiceProvider();
+        return serviceProvider;
     }
 
     protected override void OnStartup(StartupEventArgs e)

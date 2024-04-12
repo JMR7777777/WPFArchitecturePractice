@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WPFArchitecturePractice.Model.Rent;
+﻿using WPFArchitecturePractice.Model.Rent;
 
 namespace WPFArchitecturePractice.DAL.DataAccess.Rent;
 
@@ -18,8 +13,11 @@ public interface IBookDataAccess
     void UpdateBook(Book updatedBook);
 }
 
+
+//todo 存在关于书籍类型的显示的问题，需要一个转换器将 categoryId 变成 categoryName
 public class BookDataAccess : IDisposable, IBookDataAccess
 {
+    // 需要访问下面的 DataContext ，利用 efcore 实现对数据库的直接操作
     private readonly WPFArchitecturePraticeContext _context;
 
     public BookDataAccess(WPFArchitecturePraticeContext context)
@@ -37,7 +35,7 @@ public class BookDataAccess : IDisposable, IBookDataAccess
         _context.SaveChanges();
     }
 
-    // 删除图书
+    // 删除图书（逻辑删除）
     public void DeleteBook(long bookId)
     {
         var bookToDelete = _context.Books.Where(b => !b.IsDeleted).FirstOrDefault(b => b.BookId == bookId);
@@ -48,6 +46,7 @@ public class BookDataAccess : IDisposable, IBookDataAccess
         }
     }
 
+    // 删除图书（物理删除）
     public void DeleteBookPhysically(long bookId)
     {
         var bookToDelete = _context.Books.Where(b => !b.IsDeleted).FirstOrDefault(b => b.BookId == bookId);
@@ -67,6 +66,7 @@ public class BookDataAccess : IDisposable, IBookDataAccess
         var existingBook = _context.Books.Where(b => !b.IsDeleted).FirstOrDefault(b => b.BookId == updatedBook.BookId);
         if (existingBook != null)
         {
+            // 更新整个实体是否会出现问题？（部分不该修改的字段被修改或者有些字段没有被修改：updatetime/isdeleted/createTime）
             existingBook = updatedBook;
             //existingBook.Title = updatedBook.Title;
             //existingBook.Description = updatedBook.Description;
@@ -84,7 +84,7 @@ public class BookDataAccess : IDisposable, IBookDataAccess
         return _context.Books.FirstOrDefault(b => b.BookId == bookId);
     }
 
-    // 根据条件获取图书
+    // 根据条件获取图书， 当前是有三个参数： bookId， title， categoryId
     public List<Book> GetBooks(long? bookId, string? title, short? categoryId)
     {
 

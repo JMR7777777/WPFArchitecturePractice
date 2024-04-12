@@ -21,6 +21,7 @@ public class Book
     public bool IsRentingState { get; set; }
     public bool IsDeleted { get; set; }
 
+    // 定义导航和外键
     public short CategoryId { get; set; }
     public virtual BookCategory Category { get; set; }
 }

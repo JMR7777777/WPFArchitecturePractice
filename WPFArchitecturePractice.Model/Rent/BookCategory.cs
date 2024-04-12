@@ -16,5 +16,6 @@ public class BookCategory
     public string Name { get; set; }
     public bool IsDeleted { get; set; }
 
+    // 定义导航
     public virtual ICollection<Book> Books { get; set; }
 }
