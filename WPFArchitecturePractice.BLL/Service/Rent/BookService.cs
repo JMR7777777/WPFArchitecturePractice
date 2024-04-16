@@ -6,7 +6,7 @@ namespace WPFArchitecturePractice.BLL.Service.Rent
     // BookService 的接口类
     public interface IBookService
     {
-        List<Book> SearchBooks(long? bookId, string? title, short? categoryId);
+        Task<List<Book>> SearchBooksAsync(long? bookId, string? title, short? categoryId);
     }
 
     // BookService 类
@@ -21,9 +21,9 @@ namespace WPFArchitecturePractice.BLL.Service.Rent
         }
 
         // 无需复杂逻辑，可以直接调用 _bookDataAccess 的 GetBooks 方法
-        public List<Book> SearchBooks(long? bookId, string? title, short? categoryId)
+        public async Task<List<Book>> SearchBooksAsync(long? bookId, string? title, short? categoryId)
         {
-            return _bookDataAccess.GetBooks(bookId, title, categoryId);
+            return await _bookDataAccess.GetBooksAsync(bookId, title, categoryId);
         }
     }
 }

@@ -1,0 +1,23 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="RentRecordsPage_Title_AddRentRecords">Add Rent Records</sys:String>
+
+    <sys:String x:Key="RentRecordsPage_Label_RenterId">Renter Id：</sys:String>
+    <sys:String x:Key="RentRecordsPage_Button_SearchRenters">Search</sys:String>
+    <sys:String x:Key="RentRecordsPage_Label_RenterNameMessage">The name of Renter is:</sys:String>
+
+
+    <sys:String x:Key="RentRecordsPage_Label_BookId">Book Id：</sys:String>
+    <sys:String x:Key="RentRecordsPage_Button_SearchBooks">Search</sys:String>
+    <sys:String x:Key="RentRecordsPage_Label_RenterTitleMessage">The title of book is:</sys:String>
+
+    <sys:String x:Key="RentRecordsPage_Label_RentDays">Rent Days：</sys:String>
+    <sys:String x:Key="RentRecordsPage_Label_LatestReturnDate">Latest Return Date：</sys:String>
+    <sys:String x:Key="RentRecordsPage_Label_MaximumRentalDays">Maximum Rental Days：</sys:String>
+
+    <sys:String x:Key="RentRecordsPage_Button_ConfirmToRent">Rent</sys:String>
+
+</ResourceDictionary>

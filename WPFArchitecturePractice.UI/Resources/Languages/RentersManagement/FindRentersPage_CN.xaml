@@ -1,0 +1,14 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="FindRentersPage_Title_RentersSearch">租借人查询</sys:String>
+
+    <sys:String x:Key="FindRentersPage_Label_RenterId">租借人编号：</sys:String>
+    <sys:String x:Key="FindRentersPage_Label_RenterName">租借人姓名：</sys:String>
+    <sys:String x:Key="FindRentersPage_Label_RenterPhoneNumber">租借人手机号：</sys:String>
+
+    <sys:String x:Key="FindRentersPage_Button_SearchRenters">查询</sys:String>
+    <sys:String x:Key="FindRentersPage_Button_SetAsCurrentRenter">设为当前租借人</sys:String>
+</ResourceDictionary>

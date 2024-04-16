@@ -1,0 +1,14 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="RibbonTab_SystemSettingsManagement">System Settings Management</sys:String>
+
+    <sys:String x:Key="RibbonGroup_Blacklist">Blacklist</sys:String>
+    <sys:String x:Key="RibbonGroup_AbnormalConditionMonitoring">Abnormal Condition Monitoring</sys:String>
+
+    <sys:String x:Key="RibbonButton_RentersBlacklist">Renters Blacklist</sys:String>
+    <sys:String x:Key="RibbonButton_UsersBlacklist">Users Blacklist</sys:String>
+    <sys:String x:Key="RibbonButton_BooksStatesManagement">Books States Management</sys:String>
+    <sys:String x:Key="RibbonButton_AbnormalConditionLog">Abnormal Condition Log</sys:String>
+</ResourceDictionary>

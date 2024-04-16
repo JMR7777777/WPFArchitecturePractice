@@ -1,0 +1,23 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="RentRecordsPage_Title_AddRentRecords">租借登记</sys:String>
+
+    <sys:String x:Key="RentRecordsPage_Label_RenterId">租借人卡号：</sys:String>
+    <sys:String x:Key="RentRecordsPage_Button_SearchRenters">查找</sys:String>
+    <sys:String x:Key="RentRecordsPage_Label_RenterNameMessage">租借人姓名为：</sys:String>
+
+
+    <sys:String x:Key="RentRecordsPage_Label_BookId">书籍编号：</sys:String>
+    <sys:String x:Key="RentRecordsPage_Button_SearchBooks">查找</sys:String>
+    <sys:String x:Key="RentRecordsPage_Label_RenterTitleMessage">书籍名称为：</sys:String>
+
+    <sys:String x:Key="RentRecordsPage_Label_RentDays">租借天数：</sys:String>
+    <sys:String x:Key="RentRecordsPage_Label_LatestReturnDate">最迟归还日期：</sys:String>
+    <sys:String x:Key="RentRecordsPage_Label_MaximumRentalDays">最长租借天数：</sys:String>
+
+    <sys:String x:Key="RentRecordsPage_Button_ConfirmToRent">确认租借</sys:String>
+
+</ResourceDictionary>

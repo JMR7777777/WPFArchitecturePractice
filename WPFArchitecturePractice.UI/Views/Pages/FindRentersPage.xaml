@@ -19,7 +19,7 @@
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center"
                 FontSize="30"
-                Text="查询租借人" />
+                Text="{DynamicResource FindRentersPage_Title_RentersSearch}" />
             <!--#endregion-->
 
             <!--#region 租借信息表单-->
@@ -44,7 +44,7 @@
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center"
                     FontSize="14"
-                    Text="租借人编号：" />
+                    Text="{DynamicResource FindRentersPage_Label_RenterId}" />
                 <TextBox
                     Grid.Row="0"
                     Grid.Column="2"
@@ -63,7 +63,7 @@
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center"
                     FontSize="14"
-                    Text="租借人姓名：" />
+                    Text="{DynamicResource FindRentersPage_Label_RenterName}" />
 
                 <TextBox
                     Grid.Row="1"
@@ -83,7 +83,7 @@
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center"
                     FontSize="14"
-                    Text="租借人手机号：" />
+                    Text="{DynamicResource FindRentersPage_Label_RenterPhoneNumber}" />
                 <TextBox
                     Grid.Row="2"
                     Grid.Column="2"
@@ -103,7 +103,7 @@
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     Command="{Binding SearchRentersCommand}"
-                    Content="查询" />
+                    Content="{DynamicResource FindRentersPage_Button_SearchRenters}" />
                 <!--#endregion-->
             </Grid>
             <!--#endregion-->
@@ -115,7 +115,7 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Command="{Binding SetAsCurrentRenterCommand}"
-                Content="设为当前租借人" />
+                Content="{DynamicResource FindRentersPage_Button_SetAsCurrentRenter}" />
             <!--#endregion-->
 
         </StackPanel>

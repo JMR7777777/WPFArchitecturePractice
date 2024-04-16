@@ -1,0 +1,17 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="RibbonTab_RentersManagement">Renters Management</sys:String>
+
+    <sys:String x:Key="RibbonGroup_RentersManagement">Renters Management</sys:String>
+    <sys:String x:Key="RibbonGroup_RentersAnalysis">Renters Analysis</sys:String>
+
+    <sys:String x:Key="RibbonButton_SearchRenters">Search Renters</sys:String>
+    <sys:String x:Key="RibbonButton_AddRenters">Add Renters</sys:String>
+    <sys:String x:Key="RibbonButton_ChangeRentersInfo">Change Renters Info</sys:String>
+    <sys:String x:Key="RibbonButton_DeleteRenters">Delete Renters</sys:String>
+    <sys:String x:Key="RibbonButton_RentHistory">Rent History</sys:String>
+    <sys:String x:Key="RibbonButton_RentersInfoChangeLog">Renters Info Change Log</sys:String>
+    <sys:String x:Key="RibbonButton_RentPreference">Rent Preference</sys:String>
+</ResourceDictionary>

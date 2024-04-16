@@ -1,0 +1,18 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="RibbonTab_RentRecords">租借记录</sys:String>
+
+    <sys:String x:Key="RibbonGroup_RecordsManagement">记录管理</sys:String>
+    <sys:String x:Key="RibbonGroup_RecordsAnalysis">记录统计</sys:String>
+
+    <sys:String x:Key="RibbonButton_AddRentRecords">租借登记</sys:String>
+    <sys:String x:Key="RibbonButton_SearchRentRecords">记录查询</sys:String>
+    <sys:String x:Key="RibbonButton_ChangeRentRecords">记录修改</sys:String>
+    <sys:String x:Key="RibbonButton_DeleteRentRecords">记录删除</sys:String>
+    <sys:String x:Key="RibbonButton_AnalyseRentRecordsAccordingToBook">根据书籍统计</sys:String>
+    <sys:String x:Key="RibbonButton_AnalyseRentRecordsAccordingToRenter">根据租借人统计</sys:String>
+    <sys:String x:Key="RibbonButton_AnalyseRentRecordsAccordingToRentTime">根据租借时间统计</sys:String>
+</ResourceDictionary>

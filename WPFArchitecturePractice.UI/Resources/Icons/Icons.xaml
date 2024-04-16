@@ -5,6 +5,7 @@
     <ImageSource x:Key="delete.png">/Resources/Icons/delete.png</ImageSource>
     <ImageSource x:Key="edit.png">/Resources/Icons/edit.png</ImageSource>
     <ImageSource x:Key="file-add.png">/Resources/Icons/file-add.png</ImageSource>
+    <ImageSource x:Key="global.png">/Resources/Icons/global.png</ImageSource>
     <ImageSource x:Key="home.png">/Resources/Icons/home.png</ImageSource>
     <ImageSource x:Key="question.png">/Resources/Icons/question.png</ImageSource>
     <ImageSource x:Key="redo.png">/Resources/Icons/redo.png</ImageSource>

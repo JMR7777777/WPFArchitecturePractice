@@ -1,0 +1,34 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <ResourceDictionary.MergedDictionaries>
+        <!--#region Ribbon-->
+        <ResourceDictionary Source="Ribbon/Ribbon_EN.xaml" />
+        <ResourceDictionary Source="Ribbon/RentRecords_EN.xaml" />
+        <ResourceDictionary Source="Ribbon/BooksManagement_EN.xaml" />
+        <ResourceDictionary Source="Ribbon/RentersManagement_EN.xaml" />
+        <ResourceDictionary Source="Ribbon/UsersManagement_EN.xaml" />
+        <ResourceDictionary Source="Ribbon/SystemSettingsManagement_EN.xaml" />
+        <!--#endregion-->
+
+        <!--#region RentRecords-->
+        <ResourceDictionary Source="RentRecords/RentRecordsPage_EN.xaml" />
+        <!--#endregion-->
+
+        <!--#region BooksManagement-->
+        <ResourceDictionary Source="BooksManagement/FindBooksPage_EN.xaml" />
+        <!--#endregion-->
+
+        <!--#region RentersManagement-->
+        <ResourceDictionary Source="RentersManagement/FindRentersPage_EN.xaml" />
+        <!--#endregion-->
+
+        <!--#region UsersManagement-->
+        <!--#endregion-->
+
+        <!--#region SystemSettingsManagement-->
+        <!--#endregion-->
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>  

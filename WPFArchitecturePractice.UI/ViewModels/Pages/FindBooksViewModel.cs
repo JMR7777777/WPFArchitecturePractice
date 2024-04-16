@@ -2,8 +2,10 @@
 using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.Messaging;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 using WPFArchitecturePractice.BLL.Service.Rent;
 using WPFArchitecturePractice.Model.Rent;
+using WPFArchitecturePractice.UI.Config;
 using WPFArchitecturePractice.UI.Messages;
 
 namespace WPFArchitecturePractice.UI.ViewModels
@@ -32,14 +34,14 @@ namespace WPFArchitecturePractice.UI.ViewModels
         [RelayCommand]
         public void SetAsCurrentBooks()
         {
-            WeakReferenceMessenger.Default.Send(new ChangePageMessage("Views\\RentRecordsPage.xaml"));
+            WeakReferenceMessenger.Default.Send(new ChangePageMessage(ViewPathMapper.RentRecordsPage));
         }
 
         [RelayCommand]
-        public void SearchBooks()
+        public async Task SearchBooksAsync()
         {
             // 调用 BookService 中的方法执行查询
-            var books = _bookService.SearchBooks(this.BookId, this.BookTitle, this.BookCategoryId);
+            var books = await _bookService.SearchBooksAsync(this.BookId, this.BookTitle, this.BookCategoryId);
 
             // 将查询结果更新到 Books 集合中
             Books.Clear();

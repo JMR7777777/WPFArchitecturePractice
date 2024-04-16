@@ -19,7 +19,7 @@
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center"
                 FontSize="30"
-                Text="书籍查询" />
+                Text="{DynamicResource FindBooksPage_Title_BooksSearch}" />
             <!--#endregion-->
 
             <!--#region 租借信息表单-->
@@ -44,7 +44,7 @@
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center"
                     FontSize="14"
-                    Text="书籍编号：" />
+                    Text="{DynamicResource FindBooksPage_Label_BookId}" />
                 <TextBox
                     Grid.Row="0"
                     Grid.Column="2"
@@ -63,7 +63,7 @@
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center"
                     FontSize="14"
-                    Text="书籍名称：" />
+                    Text="{DynamicResource FindBooksPage_Label_BookTitle}" />
 
                 <TextBox
                     Grid.Row="1"
@@ -83,7 +83,7 @@
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center"
                     FontSize="14"
-                    Text="书籍类别：" />
+                    Text="{DynamicResource FindBooksPage_Label_BookCategory}" />
                 <ComboBox
                     Grid.Row="2"
                     Grid.Column="2"
@@ -103,7 +103,7 @@
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     Command="{Binding SearchBooksCommand}"
-                    Content="查询" />
+                    Content="{DynamicResource FindBooksPage_Button_SearchBooks}" />
                 <!--#endregion-->
             </Grid>
             <!--#endregion-->
@@ -115,7 +115,7 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Command="{Binding SetAsCurrentBooksCommand}"
-                Content="设为当前租借人" />
+                Content="{DynamicResource FindBooksPage_Button_SetAsCurrentBooks}" />
             <!--#endregion-->
 
         </StackPanel>

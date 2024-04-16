@@ -25,7 +25,12 @@
                 <!--#endregion-->
 
                 <!--#region Icon resources Import-->
-                <ResourceDictionary Source="/Resources/Icons.xaml" />
+                <ResourceDictionary Source="/Resources/Icons/Icons.xaml" />
+                <!--#endregion-->
+
+                <!--#region Icon resources Import-->
+                <ResourceDictionary Source="/Resources/Languages/Chinese.xaml" />
+                <!--<ResourceDictionary Source="/Resources/Languages/English.xaml" />-->
                 <!--#endregion-->
 
             </ResourceDictionary.MergedDictionaries>

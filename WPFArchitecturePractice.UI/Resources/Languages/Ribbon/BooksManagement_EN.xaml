@@ -1,0 +1,19 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="RibbonTab_BooksManagement">Books Management</sys:String>
+
+    <sys:String x:Key="RibbonGroup_BooksManagement">Books Management</sys:String>
+    <sys:String x:Key="RibbonGroup_BooksAnalysis">Books Analysis</sys:String>
+
+    <sys:String x:Key="RibbonButton_SearchBooks">Search Books</sys:String>
+    <sys:String x:Key="RibbonButton_AddBooks">Add Books</sys:String>
+    <sys:String x:Key="RibbonButton_ChangeBooksInfo">Change Books Info</sys:String>
+    <sys:String x:Key="RibbonButton_DeleteBooks">Delete Books</sys:String>
+    <sys:String x:Key="RibbonButton_AnalyseBooksAccordingToRenters">Analyse By Renters</sys:String>
+    <sys:String x:Key="RibbonButton_AnalyseBooksAccordingToBookCategory">Analyse By Book Category</sys:String>
+    <sys:String x:Key="RibbonButton_AnalyseBooksAccordingToRentTimes">Analyse By Rent Times</sys:String>
+    <sys:String x:Key="RibbonButton_AnalyseBooksAccordingToRecordTime">Analyse By Record Time</sys:String>
+    <sys:String x:Key="RibbonButton_AnalyseBooksAccordingToCurrentState">Analyse By Current State</sys:String>
+</ResourceDictionary>

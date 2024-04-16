@@ -19,7 +19,7 @@
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center"
                 FontSize="30"
-                Text="租借登记" />
+                Text="{DynamicResource RentRecordsPage_Title_AddRentRecords}" />
             <!--#endregion-->
 
             <!--#region 租借信息表单-->
@@ -51,7 +51,7 @@
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center"
                     FontSize="14"
-                    Text="租借人卡号：" />
+                    Text="{DynamicResource RentRecordsPage_Label_RenterId}" />
                 <Grid
                     Grid.Row="0"
                     Grid.Column="3"
@@ -76,7 +76,7 @@
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         Command="{Binding SearchRenterIdCommand}"
-                        Content="查找" />
+                        Content="{DynamicResource RentRecordsPage_Button_SearchRenters}" />
                 </Grid>
                 <TextBlock
                     Grid.Row="0"
@@ -84,7 +84,7 @@
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Center"
                     FontSize="14"
-                    Text="租借人姓名为：姜毛瑞" />
+                    Text="{DynamicResource RentRecordsPage_Label_RenterNameMessage}" />
                 <!--#endregion-->
 
                 <!--#region ROW 1 书籍编号-->
@@ -100,7 +100,7 @@
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center"
                     FontSize="14"
-                    Text="书籍编号：" />
+                    Text="{DynamicResource RentRecordsPage_Label_BookId}" />
                 <Grid
                     Grid.Row="1"
                     Grid.Column="3"
@@ -124,7 +124,7 @@
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         Command="{Binding SearchBookIdCommand}"
-                        Content="查找" />
+                        Content="{DynamicResource RentRecordsPage_Button_SearchBooks}" />
 
                 </Grid>
                 <TextBlock
@@ -133,7 +133,7 @@
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Center"
                     FontSize="14"
-                    Text="书籍名称为：《数据结构》" />
+                    Text="{DynamicResource RentRecordsPage_Label_RenterTitleMessage}" />
                 <!--#endregion-->
 
                 <!--#region ROW 2 租借时间-->
@@ -149,7 +149,7 @@
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center"
                     FontSize="14"
-                    Text="租借天数：" />
+                    Text="{DynamicResource RentRecordsPage_Label_RentDays}" />
                 <Grid
                     Grid.Row="2"
                     Grid.Column="3"
@@ -168,7 +168,7 @@
                         Margin="10,10,10,10"
                         HorizontalAlignment="Stretch"
                         VerticalAlignment="Stretch"
-                        Content="最迟归还日期："
+                        Content="{DynamicResource RentRecordsPage_Label_LatestReturnDate}"
                         FontSize="14" />
                     <DatePicker
                         Grid.Row="0"
@@ -184,7 +184,7 @@
                         Margin="10,10,10,10"
                         HorizontalAlignment="Stretch"
                         VerticalAlignment="Stretch"
-                        Content="最长租借天数："
+                        Content="{DynamicResource RentRecordsPage_Label_MaximumRentalDays}"
                         FontSize="14" />
                     <TextBox
                         Grid.Row="1"
@@ -207,7 +207,7 @@
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     Command="{Binding RentConfirmCommand}"
-                    Content="确认租借" />
+                    Content="{DynamicResource RentRecordsPage_Button_ConfirmToRent}" />
 
             </Grid>
             <!--#endregion-->

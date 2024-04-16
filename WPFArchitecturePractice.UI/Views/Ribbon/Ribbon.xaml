@@ -5,213 +5,224 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:WPFArchitecturePractice.UI.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:viewModels="clr-namespace:WPFArchitecturePractice.UI.ViewModels"
     d:DesignHeight="450"
     d:DesignWidth="800"
     DataContext="{Binding RibbonViewModel, Source={StaticResource ViewModelLocator}}"
     mc:Ignorable="d">
     <Grid>
-        <Ribbon SelectedIndex="0">
+        <Ribbon SelectedIndex="4">
             <!--  Ribbon Quick Access Toolbar  -->
             <Ribbon.QuickAccessToolBar>
                 <RibbonQuickAccessToolBar>
                     <RibbonButton SmallImageSource="{StaticResource save.png}" />
                     <RibbonSplitButton SmallImageSource="{StaticResource undo.png}">
-                        <RibbonSplitMenuItem Header="Undo1" />
-                        <RibbonSplitMenuItem Header="Undo2" />
-                        <RibbonSplitMenuItem Header="Undo3" />
+                        <RibbonSplitMenuItem Header="撤回1" />
+                        <RibbonSplitMenuItem Header="撤回2" />
+                        <RibbonSplitMenuItem Header="撤回3" />
                     </RibbonSplitButton>
                     <RibbonSplitButton SmallImageSource="{StaticResource redo.png}">
-                        <RibbonSplitMenuItem Header="Redo1" />
-                        <RibbonSplitMenuItem Header="Redo2" />
-                        <RibbonSplitMenuItem Header="Redo3" />
+                        <RibbonSplitMenuItem Header="取消撤回1" />
+                        <RibbonSplitMenuItem Header="取消撤回2" />
+                        <RibbonSplitMenuItem Header="取消撤回3" />
                     </RibbonSplitButton>
                 </RibbonQuickAccessToolBar>
             </Ribbon.QuickAccessToolBar>
 
             <!--  Ribbon Help Pane Content  -->
             <Ribbon.HelpPaneContent>
-                <RibbonButton SmallImageSource="{StaticResource question.png}" />
+                <RibbonQuickAccessToolBar>
+                    <RibbonSplitButton SmallImageSource="{StaticResource global.png}">
+                        <RibbonSplitMenuItem
+                            x:Name="GlobalLanguageChoice_CN"
+                            Command="{Binding GlobalLanguageChoosedCommand}"
+                            Header="{DynamicResource Ribbon_GlobalLanguageChoice_CN}" />
+                        <RibbonSplitMenuItem
+                            x:Name="GlobalLanguageChoice_EN"
+                            Command="{Binding GlobalLanguageChoosedCommand}"
+                            Header="{DynamicResource Ribbon_GlobalLanguageChoice_EN}" />
+                    </RibbonSplitButton>
+                    <RibbonButton SmallImageSource="{StaticResource question.png}" />
+                </RibbonQuickAccessToolBar>
             </Ribbon.HelpPaneContent>
 
             <!--  Ribbon Application Menu  -->
             <Ribbon.ApplicationMenu>
                 <RibbonApplicationMenu KeyTip="F" Visibility="Collapsed">
-                    <RibbonApplicationMenuItem Width="150" Header="Save" />
-                    <RibbonApplicationMenuItem Header="Options" />
+                    <RibbonApplicationMenuItem Width="150" />
+                    <RibbonApplicationMenuItem />
                 </RibbonApplicationMenu>
             </Ribbon.ApplicationMenu>
 
             <!--  Ribbon Tab #1 Home  -->
-            <RibbonTab Header="租借记录" KeyTip="R">
-                <RibbonGroup Header="记录管理">
+            <RibbonTab Header="{DynamicResource RibbonTab_RentRecords}" KeyTip="R">
+                <RibbonGroup Header="{DynamicResource RibbonButton_AddRentRecords}">
                     <RibbonButton
                         Command="{Binding RentRecordsClickedCommand}"
-                        Label="租借登记"
+                        Label="{DynamicResource RibbonButton_SearchRentRecords}"
                         LargeImageSource="{StaticResource file-add.png}"
                         SmallImageSource="{StaticResource file-add.png}" />
                     <RibbonButton
-                        Label="记录查询"
+                        Label="{DynamicResource RibbonButton_SearchRentRecords}"
                         LargeImageSource="{StaticResource search.png}"
                         SmallImageSource="{StaticResource search.png}" />
                     <RibbonButton
-                        Label="记录修改"
+                        Label="{DynamicResource RibbonButton_ChangeRentRecords}"
                         LargeImageSource="{StaticResource edit.png}"
                         SmallImageSource="{StaticResource edit.png}" />
                     <RibbonButton
-                        Label="记录删除"
+                        Label="{DynamicResource RibbonButton_DeleteRentRecords}"
                         LargeImageSource="{StaticResource delete.png}"
                         SmallImageSource="{StaticResource delete.png}" />
                 </RibbonGroup>
-                <RibbonGroup Header="记录统计">
+                <RibbonGroup Header="{DynamicResource RibbonGroup_RecordsAnalysis}">
                     <RibbonMenuButton
-                        Label="根据书籍统计"
+                        Label="{DynamicResource RibbonButton_AnalyseRentRecordsAccordingToBook}"
                         LargeImageSource="{StaticResource book.png}"
                         SmallImageSource="{StaticResource book.png}" />
                     <RibbonMenuButton
-                        Label="根据租借人统计"
+                        Label="{DynamicResource RibbonButton_AnalyseRentRecordsAccordingToRenter}"
                         LargeImageSource="{StaticResource user.png}"
                         SmallImageSource="{StaticResource user.png}" />
                     <RibbonMenuButton
-                        Label="根据租借时间统计"
+                        Label="{DynamicResource RibbonButton_AnalyseRentRecordsAccordingToRentTime}"
                         LargeImageSource="{StaticResource time-circle.png}"
                         SmallImageSource="{StaticResource time-circle.png}" />
                 </RibbonGroup>
             </RibbonTab>
 
-            <RibbonTab Header="书籍管理" KeyTip="B">
-                <RibbonGroup Header="库存管理">
+            <RibbonTab Header="{DynamicResource RibbonTab_BooksManagement}" KeyTip="B">
+                <RibbonGroup Header="{DynamicResource RibbonGroup_BooksManagement}">
                     <RibbonButton
                         Command="{Binding FindBooksClickedCommand}"
-                        Label="书籍查询"
+                        Label="{DynamicResource RibbonButton_SearchBooks}"
                         LargeImageSource="{StaticResource search.png}"
                         SmallImageSource="{StaticResource search.png}" />
                     <RibbonButton
-                        Label="新书登记"
+                        Label="{DynamicResource RibbonButton_AddBooks}"
                         LargeImageSource="{StaticResource file-add.png}"
                         SmallImageSource="{StaticResource file-add.png}" />
                     <RibbonButton
-                        Label="信息变更"
+                        Label="{DynamicResource RibbonButton_ChangeBooksInfo}"
                         LargeImageSource="{StaticResource edit.png}"
                         SmallImageSource="{StaticResource edit.png}" />
                     <RibbonButton
-                        Label="旧书删除"
+                        Label="{DynamicResource RibbonButton_DeleteBooks}"
                         LargeImageSource="{StaticResource delete.png}"
                         SmallImageSource="{StaticResource delete.png}" />
                 </RibbonGroup>
-                <RibbonGroup Header="书籍统计">
+                <RibbonGroup Header="{DynamicResource RibbonGroup_BooksAnalysis}">
                     <RibbonButton
-                        Label="根据录入人统计"
+                        Label="{DynamicResource RibbonButton_AnalyseBooksAccordingToRenters}"
                         LargeImageSource="{StaticResource user.png}"
                         SmallImageSource="{StaticResource user.png}" />
                     <RibbonButton
-                        Label="根据书籍类别统计"
+                        Label="{DynamicResource RibbonButton_AnalyseBooksAccordingToBookCategory}"
                         LargeImageSource="{StaticResource category.png}"
                         SmallImageSource="{StaticResource category.png}" />
                     <RibbonButton
-                        Label="根据租借次数统计"
+                        Label="{DynamicResource RibbonButton_AnalyseBooksAccordingToRentTimes}"
                         LargeImageSource="{StaticResource file-add.png}"
                         SmallImageSource="{StaticResource file-add.png}" />
                     <RibbonButton
-                        Label="根据录入时间进行统计"
+                        Label="{DynamicResource RibbonButton_AnalyseBooksAccordingToRecordTime}"
                         LargeImageSource="{StaticResource time-circle.png}"
                         SmallImageSource="{StaticResource time-circle.png}" />
                     <RibbonButton
-                        Label="根据当前状态进行统计"
+                        Label="{DynamicResource RibbonButton_AnalyseBooksAccordingToCurrentState}"
                         LargeImageSource="{StaticResource home.png}"
                         SmallImageSource="{StaticResource home.png}" />
                 </RibbonGroup>
             </RibbonTab>
 
-            <RibbonTab Header="租借人管理" KeyTip="C">
-                <RibbonGroup Header="租借人管理">
+            <RibbonTab Header="{DynamicResource RibbonTab_RentersManagement}" KeyTip="C">
+                <RibbonGroup Header="{DynamicResource RibbonGroup_RentersManagement}">
                     <RibbonButton
                         Command="{Binding FindRentersClickedCommand}"
-                        Label="查询租借人"
+                        Label="{DynamicResource RibbonButton_SearchRenters}"
                         LargeImageSource="{StaticResource user.png}"
                         SmallImageSource="{StaticResource user.png}" />
                     <RibbonButton
-                        Label="增加租借人"
+                        Label="{DynamicResource RibbonButton_AddRenters}"
                         LargeImageSource="{StaticResource user.png}"
                         SmallImageSource="{StaticResource user.png}" />
                     <RibbonButton
-                        Label="修改租借人"
+                        Label="{DynamicResource RibbonButton_ChangeRentersInfo}"
                         LargeImageSource="{StaticResource user.png}"
                         SmallImageSource="{StaticResource user.png}" />
                     <RibbonButton
-                        Label="删除租借人"
-                        LargeImageSource="{StaticResource user.png}"
-                        SmallImageSource="{StaticResource user.png}" />
-                </RibbonGroup>
-                <RibbonGroup Header="租借人统计">
-                    <RibbonButton
-                        Label="历史租借信息"
-                        LargeImageSource="{StaticResource user.png}"
-                        SmallImageSource="{StaticResource user.png}" />
-                    <RibbonButton
-                        Label="信息变更记录"
-                        LargeImageSource="{StaticResource user.png}"
-                        SmallImageSource="{StaticResource user.png}" />
-                    <RibbonButton
-                        Label="租借偏好统计"
+                        Label="{DynamicResource RibbonButton_DeleteRenters}"
                         LargeImageSource="{StaticResource user.png}"
                         SmallImageSource="{StaticResource user.png}" />
                 </RibbonGroup>
-            </RibbonTab>
-
-            <RibbonTab Header="用户管理" KeyTip="U">
-                <RibbonGroup Header="本人信息">
+                <RibbonGroup Header="{DynamicResource RibbonGroup_RentersAnalysis}">
                     <RibbonButton
-                        Label="本人信息"
+                        Label="{DynamicResource RibbonButton_RentHistory}"
                         LargeImageSource="{StaticResource user.png}"
                         SmallImageSource="{StaticResource user.png}" />
                     <RibbonButton
-                        Label="隐私设置"
+                        Label="{DynamicResource RibbonButton_RentersInfoChangeLog}"
                         LargeImageSource="{StaticResource user.png}"
                         SmallImageSource="{StaticResource user.png}" />
                     <RibbonButton
-                        Label="偏好设置"
-                        LargeImageSource="{StaticResource user.png}"
-                        SmallImageSource="{StaticResource user.png}" />
-                </RibbonGroup>
-                <RibbonGroup Header="他人信息">
-                    <RibbonButton
-                        Label="用户查询"
-                        LargeImageSource="{StaticResource user.png}"
-                        SmallImageSource="{StaticResource user.png}" />
-                    <RibbonButton
-                        Label="用户修改"
-                        LargeImageSource="{StaticResource user.png}"
-                        SmallImageSource="{StaticResource user.png}" />
-                    <RibbonButton
-                        Label="用户删除"
-                        LargeImageSource="{StaticResource user.png}"
-                        SmallImageSource="{StaticResource user.png}" />
-                    <RibbonButton
-                        Label="用户权限设置"
+                        Label="{DynamicResource RibbonButton_RentPreference}"
                         LargeImageSource="{StaticResource user.png}"
                         SmallImageSource="{StaticResource user.png}" />
                 </RibbonGroup>
             </RibbonTab>
 
-            <RibbonTab Header="系统配置管理" KeyTip="S">
-                <RibbonGroup Header="黑名单">
+            <RibbonTab Header="{DynamicResource RibbonTab_UsersManagement}" KeyTip="U">
+                <RibbonGroup Header="{DynamicResource RibbonGroup_SelfInfo}">
                     <RibbonButton
-                        Label="租借人黑名单"
+                        Label="{DynamicResource RibbonButton_SelfInfo}"
                         LargeImageSource="{StaticResource user.png}"
                         SmallImageSource="{StaticResource user.png}" />
                     <RibbonButton
-                        Label="用户黑名单"
+                        Label="{DynamicResource RibbonButton_PrivacySetting}"
                         LargeImageSource="{StaticResource user.png}"
                         SmallImageSource="{StaticResource user.png}" />
                     <RibbonButton
-                        Label="书籍状态管理"
+                        Label="{DynamicResource RibbonButton_PreferenceSetting}"
                         LargeImageSource="{StaticResource user.png}"
                         SmallImageSource="{StaticResource user.png}" />
                 </RibbonGroup>
-                <RibbonGroup Header="异常监测">
+                <RibbonGroup Header="{DynamicResource RibbonGroup_OthersInfo}">
                     <RibbonButton
-                        Label="异常信息记录"
+                        Label="{DynamicResource RibbonButton_SearchUsers}"
+                        LargeImageSource="{StaticResource user.png}"
+                        SmallImageSource="{StaticResource user.png}" />
+                    <RibbonButton
+                        Label="{DynamicResource RibbonButton_ChangeUsersInfo}"
+                        LargeImageSource="{StaticResource user.png}"
+                        SmallImageSource="{StaticResource user.png}" />
+                    <RibbonButton
+                        Label="{DynamicResource RibbonButton_DeleteUsers}"
+                        LargeImageSource="{StaticResource user.png}"
+                        SmallImageSource="{StaticResource user.png}" />
+                    <RibbonButton
+                        Label="{DynamicResource RibbonButton_UsersPermissionSettings}"
+                        LargeImageSource="{StaticResource user.png}"
+                        SmallImageSource="{StaticResource user.png}" />
+                </RibbonGroup>
+            </RibbonTab>
+
+            <RibbonTab Header="{DynamicResource RibbonTab_SystemSettingsManagement}" KeyTip="S">
+                <RibbonGroup Header="{DynamicResource RibbonGroup_Blacklist}">
+                    <RibbonButton
+                        Label="{DynamicResource RibbonButton_RentersBlacklist}"
+                        LargeImageSource="{StaticResource user.png}"
+                        SmallImageSource="{StaticResource user.png}" />
+                    <RibbonButton
+                        Label="{DynamicResource RibbonButton_UsersBlacklist}"
+                        LargeImageSource="{StaticResource user.png}"
+                        SmallImageSource="{StaticResource user.png}" />
+                    <RibbonButton
+                        Label="{DynamicResource RibbonButton_BooksStatesManagement}"
+                        LargeImageSource="{StaticResource user.png}"
+                        SmallImageSource="{StaticResource user.png}" />
+                </RibbonGroup>
+                <RibbonGroup Header="{DynamicResource RibbonGroup_AbnormalConditionMonitoring}">
+                    <RibbonButton
+                        Label="{DynamicResource RibbonButton_AbnormalConditionLog}"
                         LargeImageSource="{StaticResource user.png}"
                         SmallImageSource="{StaticResource user.png}" />
                 </RibbonGroup>

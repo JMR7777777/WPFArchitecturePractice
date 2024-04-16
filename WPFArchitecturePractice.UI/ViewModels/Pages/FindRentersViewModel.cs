@@ -2,6 +2,7 @@
 using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.Messaging;
 using System.Diagnostics;
+using WPFArchitecturePractice.UI.Config;
 using WPFArchitecturePractice.UI.Messages;
 
 namespace WPFArchitecturePractice.UI.ViewModels
@@ -11,7 +12,7 @@ namespace WPFArchitecturePractice.UI.ViewModels
         [RelayCommand]
         public void SetAsCurrentRenter()
         {
-            WeakReferenceMessenger.Default.Send(new ChangePageMessage("Views\\RentRecordsPage.xaml"));
+            WeakReferenceMessenger.Default.Send(new ChangePageMessage(ViewPathMapper.RentRecordsPage));
         }
         [RelayCommand]
         public void SearchRenters()

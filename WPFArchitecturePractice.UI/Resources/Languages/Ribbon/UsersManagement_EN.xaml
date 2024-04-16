@@ -1,0 +1,17 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="RibbonTab_UsersManagement">Users Management</sys:String>
+
+    <sys:String x:Key="RibbonGroup_SelfInfo">Self Info</sys:String>
+    <sys:String x:Key="RibbonGroup_OthersInfo">Others Info</sys:String>
+
+    <sys:String x:Key="RibbonButton_SelfInfo">Self Info</sys:String>
+    <sys:String x:Key="RibbonButton_PrivacySetting">Privacy Setting</sys:String>
+    <sys:String x:Key="RibbonButton_PreferenceSetting">Preference Setting</sys:String>
+    <sys:String x:Key="RibbonButton_SearchUsers">Search Users</sys:String>
+    <sys:String x:Key="RibbonButton_ChangeUsersInfo">Change Users Info</sys:String>
+    <sys:String x:Key="RibbonButton_DeleteUsers">Delete Users</sys:String>
+    <sys:String x:Key="RibbonButton_UsersPermissionSettings">Permission Settings</sys:String>
+</ResourceDictionary>

@@ -1,0 +1,18 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="RibbonTab_RentRecords">Rent Records</sys:String>
+
+    <sys:String x:Key="RibbonGroup_RecordsManagement">Records Management</sys:String>
+    <sys:String x:Key="RibbonGroup_RecordsAnalysis">Records Analysis</sys:String>
+
+    <sys:String x:Key="RibbonButton_AddRentRecords">Add Rent Records</sys:String>
+    <sys:String x:Key="RibbonButton_SearchRentRecords">Search Rent Records</sys:String>
+    <sys:String x:Key="RibbonButton_ChangeRentRecords">Change Rent Records</sys:String>
+    <sys:String x:Key="RibbonButton_DeleteRentRecords">Delete Rent Records</sys:String>
+    <sys:String x:Key="RibbonButton_AnalyseRentRecordsAccordingToBook">Analyse By Book</sys:String>
+    <sys:String x:Key="RibbonButton_AnalyseRentRecordsAccordingToRenter">Analyse By Renter</sys:String>
+    <sys:String x:Key="RibbonButton_AnalyseRentRecordsAccordingToRentTime">Analyse By Rent Time</sys:String>
+</ResourceDictionary>

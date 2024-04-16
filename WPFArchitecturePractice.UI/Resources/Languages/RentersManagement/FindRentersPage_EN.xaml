@@ -1,0 +1,14 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="FindRentersPage_Title_RentersSearch">RentersSearch</sys:String>
+
+    <sys:String x:Key="FindRentersPage_Label_RenterId">Id：</sys:String>
+    <sys:String x:Key="FindRentersPage_Label_RenterName">Name：</sys:String>
+    <sys:String x:Key="FindRentersPage_Label_RenterPhoneNumber">Phone Number：</sys:String>
+
+    <sys:String x:Key="FindRentersPage_Button_SearchRenters">Search</sys:String>
+    <sys:String x:Key="FindRentersPage_Button_SetAsCurrentRenter">Set As Current Renter</sys:String>
+</ResourceDictionary>
