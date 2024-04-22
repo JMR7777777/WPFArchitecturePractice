@@ -40,7 +40,7 @@ namespace WPFArchitecturePractice.UI.ViewModels
             WeakReferenceMessenger.Default.Send(new ChangePageMessage(PagePath));
         }
 
-        //todo 比较对象1
+        //todo 点击切换语言后更改app.xaml里面的语言资源文件内容
         private void ChangeUILanguage(string targetLanguage)
         {
             List<ResourceDictionary> dictionaryList = new List<ResourceDictionary>();
